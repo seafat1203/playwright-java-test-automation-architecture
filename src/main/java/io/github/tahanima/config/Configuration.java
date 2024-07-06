@@ -3,7 +3,6 @@ package io.github.tahanima.config;
 import org.aeonbits.owner.Config;
 import org.aeonbits.owner.Config.LoadPolicy;
 import org.aeonbits.owner.Config.Sources;
-
 /**
  * @author tahanima
  */
@@ -33,4 +32,12 @@ public interface Configuration extends Config {
     int timeout();
 
     boolean video();
+    @Key("context")
+    String context();
+
+    @Key("gramsUrl")
+    String gramsUrl();
+
+    @Key("rmcUrl")
+    String rmcUrl();
 }

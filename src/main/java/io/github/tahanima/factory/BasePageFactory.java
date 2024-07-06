@@ -2,7 +2,7 @@ package io.github.tahanima.factory;
 
 import com.microsoft.playwright.Page;
 
-import io.github.tahanima.ui.page.BasePage;
+import io.github.tahanima.ui.page.demoPage.BasePage;
 
 import lombok.extern.slf4j.Slf4j;
 

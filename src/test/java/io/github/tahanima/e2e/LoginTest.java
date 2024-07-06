@@ -11,8 +11,8 @@ import io.github.tahanima.annotation.DataSource;
 import io.github.tahanima.annotation.Smoke;
 import io.github.tahanima.annotation.Validation;
 import io.github.tahanima.dto.LoginDto;
-import io.github.tahanima.ui.page.LoginPage;
-import io.github.tahanima.ui.page.ProductsPage;
+import io.github.tahanima.ui.page.demoPage.LoginPage;
+import io.github.tahanima.ui.page.demoPage.ProductsPage;
 import io.qameta.allure.*;
 
 import org.junit.jupiter.api.AfterEach;

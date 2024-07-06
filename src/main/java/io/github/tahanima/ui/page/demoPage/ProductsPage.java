@@ -1,4 +1,4 @@
-package io.github.tahanima.ui.page;
+package io.github.tahanima.ui.page.demoPage;
 
 import com.microsoft.playwright.Locator;
 

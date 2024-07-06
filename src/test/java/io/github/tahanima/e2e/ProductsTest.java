@@ -10,7 +10,7 @@ import io.github.artsok.ParameterizedRepeatedIfExceptionsTest;
 import io.github.tahanima.annotation.DataSource;
 import io.github.tahanima.annotation.Smoke;
 import io.github.tahanima.dto.ProductsDto;
-import io.github.tahanima.ui.page.LoginPage;
+import io.github.tahanima.ui.page.demoPage.LoginPage;
 import io.qameta.allure.*;
 
 import org.junit.jupiter.api.AfterEach;

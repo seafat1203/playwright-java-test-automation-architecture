@@ -1,4 +1,4 @@
-package io.github.tahanima.ui.page;
+package io.github.tahanima.ui.page.demoPage;
 
 import static io.github.tahanima.config.ConfigurationManager.config;
 
