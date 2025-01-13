@@ -18,11 +18,17 @@ import io.github.tahanima.ui.page.demoPage.BasePage;
 import io.github.tahanima.ui.page.demoPage.LoginPage;
 import io.github.tahanima.util.BrowserManager;
 
+import io.github.tahanima.util.ScreenshotUtil;
 import org.apache.commons.lang3.StringUtils;
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.extension.AfterTestExecutionCallback;
 import org.junit.jupiter.api.extension.RegisterExtension;
 
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Optional;
 
 /**
@@ -71,7 +77,22 @@ public abstract class BaseTest {
 
     @AfterAll
     public void closeBrowserAndPlaywrightSessions() {
-        browser.close();
-        playwright.close();
+        try {
+            // 确保在关闭浏览器之前截取屏幕截图
+            if (page != null) {
+                // 调用 ScreenshotUtil 工具类进行截图
+                ScreenshotUtil.captureAndSaveScreenshot(page, this.getClass().getSimpleName());
+            }
+        } catch (Exception e) {
+            System.err.println("Failed to capture screenshot: " + e.getMessage());
+        } finally {
+            // 确保即使截屏失败也能正常关闭浏览器和Playwright
+            if (browser != null) {
+                browser.close();
+            }
+            if (playwright != null) {
+                playwright.close();
+            }
+        }
     }
 }

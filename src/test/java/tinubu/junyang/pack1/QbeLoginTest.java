@@ -41,6 +41,7 @@ public class QbeLoginTest extends AbstractCisTest {
                 .typeLogin("admin")
                 .typePassword("dev")
                 .clickOnLoginBtn();
+        assertThat(backLoginPage.errorMessage()).hasText("Invalid username or password.");
     }
 
 
